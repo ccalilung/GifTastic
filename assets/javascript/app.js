@@ -1,19 +1,24 @@
 
 var terms = [{ 
     term: "Homer Simpson",
-    id: "homer"
+    id: "homer",
+    photoId: "homerImg"
 },{ 
     term: "Peter Griffin",
-    id: "peter"
+    id: "peter",
+    photoId: "peterImg"
 },{ 
     term: "Hockey",
-    id: "hockey"
+    id: "hockey",
+    photoId: "hockeyImg"
 },{ 
     term: "Starbucks",
-    id: "sbux"
+    id: "sbux",
+    photoId: "sbuxImg"
 },{ 
     term: "Breaking Bad",
-    id: "breaking"
+    id: "breaking",
+    photoId: "breakingImg"
 }]
 
 var dummy = "";
@@ -25,7 +30,7 @@ function addButtons() {
     for (i = 0; i < terms.length; i++) {
         var z = $("<button>")
         var y = $("#buttoned")
-        z.attr("type", "button").attr("id", terms[i].id).attr("term", terms[i].term).addClass("btn btn-success theButtons").text(terms[i].term);
+        z.attr("type", "button").attr("id", terms[i].photoId).attr("term", terms[i].term).addClass("btn btn-success theButtons").text(terms[i].term);
         y.append(z);
     }
     $("button").css("margin", "5px")
@@ -43,9 +48,13 @@ function runFunction() {
     }).then(function (response) {
         var a = $("#image")
         for (i = 0; i < response.data.length; i++) {
-            a.append("<img src=" + "'" + response.data[i].images.fixed_height_still.url + "'/>" + "Rating: " + response.data[i].rating)
-            a.attr("url1",response.data[i].images.fixed_height.url).attr("rating",response.data[i].rating).addClass("theImages")
-        } a.removeAttr("url1")
+            var b = $("<div>")
+            b.attr("id",response.data[i].id)
+            b.append("<img src=" + "'" + response.data[i].images.fixed_height_still.url + "'/>")
+            b.attr("url1",response.data[i].images.fixed_height.url).attr("rating",response.data[i].rating).addClass("theImages").append("<br> Rating: " + response.data[i].rating)
+            a.append(b); 
+            $(".theImages").css({"float": "left", "text-align":"center"})
+        } 
     })
 }
 
