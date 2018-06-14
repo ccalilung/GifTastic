@@ -19,3 +19,9 @@ buttons {
 .centerMe {
     text-align: center;
 }
+
+body {
+    background-image: url("../images/att_stadium.jpg");
+    background-size: 100%;
+
+}

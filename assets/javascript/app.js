@@ -55,7 +55,7 @@ function runFunction() {
             var b = $("<div>")
             b.attr("id", response.data[i].id)
             b.append("<img src=" + "'" + response.data[i].images.fixed_height_still.url + "'/>")
-            b.attr("url1", response.data[i].images.fixed_height.url).attr("url2", response.data[i].images.fixed_height_still.url).attr("rating", response.data[i].rating).addClass("theImages").append("<br> Rating: " + response.data[i].rating)
+            b.attr("url1", response.data[i].images.fixed_height.url).attr("url2", response.data[i].images.fixed_height_still.url).attr("rating", response.data[i].rating).addClass("theImages text-warning bg-dark").append("<br> Rating: " + response.data[i].rating)
             a.append(b);
             $(".theImages").css({
                 "float": "left",
