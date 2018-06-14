@@ -15,7 +15,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="icon" type="favicon" href="">
@@ -26,29 +26,35 @@
     <header>
         <nav class="navbar navbar-light bg-dark mb-3">
             <a class="navbar-brand text-light" href="index.html">GifTastic!</a>
-
+            <div class="text-light" id="theme">Wrestlers and Wrestling Finishers</div>
         </nav>
+
     </header>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-            <form id="searchTerm">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 centerMe">
+                <form id="searchTerm">
                     <label for="searchBox">Search for GIPHYs</label>
-                    <input type="text" id="searchBox"><br>
+                    <input type="text" id="searchBox">
+                    <br>
                     <input class="btn btn-success" id="addButton" type="submit" value="Add Button!">
-                  </form>
-                 </div></div>
-                 <div class="row">
-                     <div class="col-md-12">
+                </form>
+                
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div id="buttoned"></div>
             </div>
         </div>
         <div class="row">
-                <div class="col-md-12">
-                    <div id="image"></div>
-                </div>
+            <div class="col-md-12">
+                <div id="image"></div>
             </div>
+        </div>
     </div>
     <script src="assets/javascript/app.js"></script>
 
